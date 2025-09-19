@@ -143,6 +143,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+claude_desktop_config.json
+api_keys.json 
 
 # Spyder project settings
 .spyderproject
