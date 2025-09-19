@@ -8,15 +8,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 核心架构
 
+### 项目结构
+```
+project/
+├── core/                    # 核心基础类
+│   ├── base_server.py      # MCP服务器基类
+│   └── __init__.py
+├── utils/                   # 共享工具模块
+│   ├── config.py           # 配置管理
+│   ├── logging_setup.py    # 日志配置
+│   └── __init__.py
+├── servers/                 # 重构后的MCP服务器
+│   ├── feishu_server.py    # 飞书集成服务
+│   ├── news_server.py      # 新闻聚合服务
+│   ├── weather_server.py   # 天气信息服务
+│   └── __init__.py
+├── config/                  # 配置文件
+│   ├── config.json         # 简化的统一配置
+│   └── .env               # 环境变量（需要创建）
+└── run_server.py          # 统一服务器启动脚本
+```
+
 ### MCP服务器
-- **feishu_mcp_server.py**: 飞书集成服务，处理群组消息发送、文档创建等飞书API操作
-- **news_mcp_server.py**: 新闻聚合服务，从多个新闻源获取和处理AI相关新闻
-- **start_server.py**: 启动脚本，用于同时启动多个MCP服务器
+- **servers/feishu_server.py**: 飞书集成服务，处理群组消息发送等操作
+- **servers/news_server.py**: 新闻聚合服务，从多个新闻源获取和处理AI相关新闻
+- **servers/weather_server.py**: 天气信息服务，提供天气数据和穿搭建议
+- **jimeng_mcp_server.py**: 图像生成服务（保持原有结构）
 
 ### 配置和测试
-- **claude_desktop_config.json**: Claude Desktop MCP服务器配置，包含飞书API凭证
-- **test_news_agent.py**: 新闻代理的集成测试脚本
-- **test_mcp_server.py**: MCP服务器功能测试
+- **claude_desktop_config.json**: Claude Desktop MCP服务器配置
+- **test_servers.py**: 统一的服务器测试脚本
 
 ### 数据组织结构
 ```
@@ -38,23 +59,17 @@ claud/
 
 ### 运行MCP服务器
 ```bash
-# 启动飞书MCP服务器
-python feishu_mcp_server.py
-
-# 启动新闻MCP服务器
-python news_mcp_server.py
-
-# 同时启动所有MCP服务器
-python start_server.py
+# 启动特定MCP服务器
+python run_server.py feishu    # 飞书服务器
+python run_server.py news     # 新闻服务器
+python run_server.py weather  # 天气服务器
+python run_server.py jimeng   # 图像生成服务器
 ```
 
 ### 测试命令
 ```bash
-# 运行新闻代理测试
-python test_news_agent.py
-
-# 运行MCP服务器功能测试
-python test_mcp_server.py
+# 运行所有服务器测试
+python test_servers.py
 ```
 
 ## AI助理工作流
