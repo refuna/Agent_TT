@@ -90,7 +90,7 @@ python test_servers.py
 
 ### 必需的环境变量
 ```bash
-FEISHU_APP_ID=cli_a84142e570f89e1b
+FEISHU_APP_ID=[app_id]
 FEISHU_APP_SECRET=[App Secret]
 FEISHU_BOT_TOKEN=[Bot Token]
 NEWSAPI_KEY=[可选，用于新闻API]

@@ -1,243 +1,240 @@
-# 秋芝个人生活助理团队构想
+# TT Personal Life Assistant Team Concept
 
-## 背景
-我是秋芝，我想打造一个个人生活助理团队，其中有5个AI助理角色，作为我的智能分身帮助我管理日常生活，提升效率和自我认知。
-
----
-
-## 1. 新闻秋 - AI新闻聚合与分析助理
-
-**触发条件**: 每日早晨问候"早上好"
-**核心功能**: 获取、分析和总结AI行业新闻
-
-**详细工作流程**:
-1. 自动抓取多个AI新闻源的最新资讯
-2. 使用自然语言处理技术筛选和排序重要新闻
-3. 生成简洁的新闻简报，突出关键信息和趋势
-4. 创建以日期命名的文件夹 (如：`2024-01-15/`)
-5. 在文件夹中保存 `新闻_YYYY-MM-DD.md` 文档
-6. 自动发送格式化新闻简报到飞书群组
-
-**技术要求**:
-- 网页抓取和RSS订阅功能
-- 内容去重和相关性排序算法
-- 中文自然语言处理能力
-- 飞书API集成
-- 模板化文档生成
+## Background
+I am TT, and I want to build a personal life assistant team consisting of 5 AI assistant roles. These assistants will act as my intelligent avatars, helping me manage daily life, improve efficiency, and enhance self-awareness.
 
 ---
 
-## 2. 穿搭秋 - 智能造型师助理
+## 1. News-TT - AI News Aggregation & Analysis Assistant
 
-**触发条件**: 新闻阅读完成后
-**核心功能**: 基于天气、场合和个人风格提供穿搭建议
+**Trigger Condition**: Morning greeting "Good Morning"  
+**Core Function**: Gather, analyze, and summarize AI industry news  
 
-**详细工作流程**:
-1. 主动询问当日行程和特殊场合安排
-2. 获取实时天气数据和未来几小时预报
-3. 读取 `aboutme/` 中的风格偏好和衣橱信息
-4. 结合天气、场合、个人风格生成穿搭建议
-5. 使用AI图像生成创建穿搭效果图
-6. 保存穿搭建议到 `穿搭_YYYY-MM-DD.md`
-7. 发送穿搭图片和建议给秋芝
+**Workflow**:
+1. Automatically fetch the latest news from multiple AI sources  
+2. Use NLP to filter and rank important news  
+3. Generate a concise news briefing highlighting key points and trends  
+4. Create a folder named by date (e.g., `2025-01-15/`)  
+5. Save the document as `News_YYYY-MM-DD.md` inside the folder  
+6. Automatically send formatted news brief to Feishu group  
 
-**技术要求**:
-- 天气API接口集成
-- 个人风格数据库管理
-- AI图像生成能力
-- 色彩搭配和风格匹配算法
-- 日历集成（可选）
-
----
-
-## 3. 教练秋 - 健康管理与指导助理
-
-**触发条件**: 穿搭决定完成后
-**核心功能**: 提供个性化健康指导和目标跟踪
-
-**详细工作流程**:
-1. 询问当日体重测量情况
-2. 记录体重数据并分析趋势
-3. 根据 `aboutme/` 中的健康目标和历史数据分析进展
-4. 生成个性化运动建议（考虑时间、体能、目标）
-5. 提供营养饮食建议和外卖推荐
-6. 创建 `健康_YYYY-MM-DD.md` 文档
-7. 更新 `aboutme/health_data.md` 中的体重和健康指标
-
-**技术要求**:
-- 健康数据分析和趋势预测
-- 运动计划生成算法
-- 营养数据库和卡路里计算
-- 目标跟踪和进度可视化
-- BMI和其他健康指标计算
+**Technical Requirements**:
+- Web scraping & RSS subscription  
+- Content deduplication and relevance ranking algorithms  
+- Chinese NLP capability  
+- Feishu API integration  
+- Template-based document generation  
 
 ---
 
-## 4. 日报秋 - 活动记录与分析助理
+## 2. Outfit-TT - Intelligent Stylist Assistant
 
-**触发条件**: 穿搭决定完成后
-**核心功能**: 记录、分析和报告日常活动
+**Trigger Condition**: After news reading is completed  
+**Core Function**: Provide outfit suggestions based on weather, occasion, and personal style  
 
-**详细工作流程**:
-1. 通过结构化对话收集当日活动信息
-2. 对活动进行分类和时间分析 
-3. 识别完成的任务、面临的挑战和收获
-4. 生成包含效率分析的日报文档
-5. 创建 `日报_YYYY-MM-DD.md` 文件
-6. 格式化为飞书文档发送到"流程群"
-7. 提供生产力洞察和改进建议
+**Workflow**:
+1. Ask about the day’s schedule and any special events  
+2. Fetch real-time weather and short-term forecast  
+3. Read style preferences and wardrobe data from `aboutme/`  
+4. Generate outfit suggestions based on weather, occasion, and style  
+5. Use AI image generation to create outfit previews  
+6. Save outfit suggestions to `Outfit_YYYY-MM-DD.md`  
+7. Send outfit image and suggestion to TT  
 
-**技术要求**:
-- 对话式信息收集系统
-- 活动分类和时间管理分析
-- 生产力指标计算
-- 飞书群组集成
-- 数据可视化能力
-
----
-
-## 5. 反思秋 - 自我认知与成长引导助理
-
-**触发条件**: 收到"今天工作结束了"的信号
-**核心功能**: 引导深度反思，促进自我认知和成长
-
-**详细工作流程**:
-1. 回顾当日所有记录（新闻、穿搭、健康、日报）
-2. 通过多轮深度对话引导反思：
-   - 情绪状态和能量水平
-   - 决策模式和思维方式
-   - 个人洞察和学习收获
-   - 改进机会和成长方向
-3. 识别行为模式和心理状态趋势
-4. 生成个性化成长建议
-5. 创建 `反思_YYYY-MM-DD.md` 文档
-6. 更新长期自我认知档案
-
-**技术要求**:
-- 高级对话AI和心理学框架
-- 情感分析和模式识别
-- 长期数据趋势分析
-- 个性化建议生成系统
-- 隐私保护和数据安全
+**Technical Requirements**:
+- Weather API integration  
+- Personal style database management  
+- AI image generation  
+- Color-matching and style recommendation algorithms  
+- Calendar integration (optional)  
 
 ---
 
-## 所需上下文文件夹结构
+## 3. Coach-TT - Health Management & Guidance Assistant
 
-### 1. `/aboutme/` - 个人信息中心
-```
+**Trigger Condition**: After outfit decision is completed  
+**Core Function**: Provide personalized health guidance and progress tracking  
+
+**Workflow**:
+1. Ask for daily weight measurement  
+2. Record weight data and analyze trends  
+3. Reference `aboutme/` for health goals and history  
+4. Generate personalized workout suggestions (based on time, fitness, goals)  
+5. Provide nutrition advice and food delivery recommendations  
+6. Create `Health_YYYY-MM-DD.md` document  
+7. Update `aboutme/health_data.md` with weight and health metrics  
+
+**Technical Requirements**:
+- Health data analysis and trend forecasting  
+- Workout plan generation  
+- Nutrition database and calorie calculation  
+- Progress tracking and visualization  
+- BMI and health indicator calculations  
+
+---
+
+## 4. Report-TT - Daily Activity Recording & Analysis Assistant
+
+**Trigger Condition**: After outfit decision is completed  
+**Core Function**: Record, analyze, and report daily activities  
+
+**Workflow**:
+1. Collect daily activity information via structured conversation  
+2. Categorize activities and perform time analysis  
+3. Identify completed tasks, challenges, and achievements  
+4. Generate a daily report with productivity analysis  
+5. Save as `Report_YYYY-MM-DD.md`  
+6. Send formatted report as Feishu document to “workflow group”  
+7. Provide productivity insights and improvement suggestions  
+
+**Technical Requirements**:
+- Conversational data collection  
+- Activity categorization and time management analysis  
+- Productivity metric calculations  
+- Feishu group integration  
+- Data visualization  
+
+---
+
+## 5. Reflection-TT - Self-Awareness & Growth Guidance Assistant
+
+**Trigger Condition**: After receiving the signal “Today’s work is finished”  
+**Core Function**: Guide deep reflection to promote self-awareness and growth  
+
+**Workflow**:
+1. Review all daily records (news, outfit, health, report)  
+2. Guide reflection via multi-turn dialogue:  
+   - Emotional state and energy levels  
+   - Decision-making patterns and thinking styles  
+   - Insights and learnings  
+   - Opportunities for growth  
+3. Identify behavioral patterns and psychological trends  
+4. Generate personalized growth suggestions  
+5. Save as `Reflection_YYYY-MM-DD.md`  
+6. Update long-term self-awareness archive  
+
+**Technical Requirements**:
+- Advanced conversational AI with psychology frameworks  
+- Sentiment analysis and pattern recognition  
+- Long-term data trend analysis  
+- Personalized recommendations  
+- Privacy protection and data security  
+
+---
+
+## Required Folder Structure
+
+### 1. `/aboutme/` - Personal Info Hub
+
 aboutme/
-├── profile.md           # 基本个人信息、偏好、目标
-├── style_preferences.md # 穿搭风格、颜色偏好、品牌喜好
-├── health_data.md       # 体重历史、健身目标、饮食限制
-├── schedule_patterns.md # 日程规律、常去场所
-└── reflection_insights.md # 历史反思模式和自我认知数据
-```
+├── profile.md # Basic info, preferences, goals
+├── style_preferences.md # Outfit style, colors, brands
+├── health_data.md # Weight history, fitness goals, dietary limits
+├── schedule_patterns.md # Routine patterns, frequent locations
+└── reflection_insights.md # Reflection history and insights
 
-### 2. `/daily_logs/` - 日常记录存储
-```
+### 2. `/daily_logs/` - Daily Records
+
 daily_logs/
 └── 2024/
-    ├── 01/
-    │   ├── 新闻_2024-01-15.md
-    │   ├── 穿搭_2024-01-15.md
-    │   ├── 健康_2024-01-15.md
-    │   ├── 日报_2024-01-15.md
-    │   └── 反思_2024-01-15.md
-    └── 02/
-        └── ...
-```
+├── 01/
+│ ├── News_2024-01-15.md
+│ ├── Outfit_2024-01-15.md
+│ ├── Health_2024-01-15.md
+│ ├── Report_2024-01-15.md
+│ └── Reflection_2024-01-15.md
+└── 02/
 
-### 3. `/templates/` - 文档模板
-```
+
+### 3. `/templates/` - Document Templates
+
 templates/
-├── news_template.md       # 新闻简报格式
-├── outfit_template.md     # 穿搭建议格式
-├── health_template.md     # 健康记录格式
-├── daily_report_template.md # 日报格式
-└── reflection_template.md  # 反思记录格式
-```
+├── news_template.md
+├── outfit_template.md
+├── health_template.md
+├── daily_report_template.md
+└── reflection_template.md
 
-### 4. `/resources/` - 资源数据库
-```
+
+
+### 4. `/resources/` - Resource Database
 resources/
-├── news_sources.json     # AI新闻源列表和RSS链接
-├── weather_locations.json # 常用地点天气配置
-├── nutrition_database.json # 食物营养数据库
-├── exercise_library.json   # 运动项目和强度数据
-└── style_database.json     # 服装搭配和风格数据
-```
+├── news_sources.json # AI news sources & RSS feeds
+├── weather_locations.json # Weather settings for locations
+├── nutrition_database.json # Food nutrition database
+├── exercise_library.json # Exercises and intensity data
+└── style_database.json # Outfit and style data
 
-### 5. `/config/` - 系统配置
-```
+
+### 5. `/config/` - System Configuration
 config/
-├── agent_settings.json    # 各助理的个性化配置
-├── feishu_config.json     # 飞书API凭证和群组设置
-├── api_keys.json          # 外部API密钥管理
-└── workflow_config.json   # 工作流触发条件和序列
-```
+├── agent_settings.json # Assistant personalization
+├── feishu_config.json # Feishu API credentials & groups
+├── api_keys.json # External API keys
+└── workflow_config.json # Workflow triggers & sequences
+
 
 ---
 
-## 所需MCP协议清单
+## Required MCP Protocol List
 
-### 1. **新闻聚合MCP** (`mcp_news_aggregator`)
-**功能**:
-- `fetch_ai_news()` - 从多源获取AI新闻
-- `summarize_articles(articles)` - 生成新闻摘要
-- `rank_by_relevance(news_list)` - 按相关性排序
+### 1. **News Aggregation MCP** (`mcp_news_aggregator`)
+**Functions**:
+- `fetch_ai_news()` - Fetch AI news from multiple sources  
+- `summarize_articles(articles)` - Generate summaries  
+- `rank_by_relevance(news_list)` - Sort by relevance  
 
-### 2. **天气服务MCP** (`mcp_weather_service`)
-**功能**:
-- `get_current_weather(location)` - 获取实时天气
-- `get_forecast(location, hours)` - 获取未来预报
-- `get_weather_alerts(location)` - 获取天气预警
+### 2. **Weather Service MCP** (`mcp_weather_service`)
+**Functions**:
+- `get_current_weather(location)` - Get current weather  
+- `get_forecast(location, hours)` - Get forecast  
+- `get_weather_alerts(location)` - Get alerts  
 
-### 3. **图像生成MCP** (`mcp_image_generator`)
-**功能**:
-- `generate_outfit_visual(description, style)` - 生成穿搭效果图
-- `create_style_board(colors, items)` - 创建风格板
-- `generate_health_charts(data)` - 生成健康数据图表
+### 3. **Image Generation MCP** (`mcp_image_generator`)
+**Functions**:
+- `generate_outfit_visual(description, style)` - Outfit previews  
+- `create_style_board(colors, items)` - Style boards  
+- `generate_health_charts(data)` - Health charts  
 
-### 4. **飞书集成MCP** (`mcp_feishu_connector`)
-**功能**:
-- `send_to_group(group_id, content)` - 发送到群组
-- `create_document(title, content)` - 创建飞书文档
-- `upload_file(file_path, folder)` - 上传文件
+### 4. **Feishu Integration MCP** (`mcp_feishu_connector`)
+**Functions**:
+- `send_to_group(group_id, content)` - Send to group  
+- `create_document(title, content)` - Create document  
+- `upload_file(file_path, folder)` - Upload files  
 
-### 5. **日历服务MCP** (`mcp_calendar_service`)
-**功能**:
-- `get_daily_schedule(date)` - 获取日程安排
-- `add_health_reminder(time, task)` - 添加健康提醒
-- `check_availability(time_range)` - 检查空闲时间
+### 5. **Calendar Service MCP** (`mcp_calendar_service`)
+**Functions**:
+- `get_daily_schedule(date)` - Get schedule  
+- `add_health_reminder(time, task)` - Add reminder  
+- `check_availability(time_range)` - Check availability  
 
-### 6. **健康追踪MCP** (`mcp_health_tracker`)
-**功能**:
-- `log_weight(date, weight)` - 记录体重
-- `calculate_health_metrics(weight, height, age)` - 计算健康指标
-- `track_progress(goal_type, current_value)` - 跟踪目标进度
-- `suggest_exercises(fitness_level, available_time)` - 推荐运动
+### 6. **Health Tracker MCP** (`mcp_health_tracker`)
+**Functions**:
+- `log_weight(date, weight)` - Log weight  
+- `calculate_health_metrics(weight, height, age)` - Health metrics  
+- `track_progress(goal_type, current_value)` - Track goals  
+- `suggest_exercises(fitness_level, available_time)` - Recommend workouts  
 
-### 7. **自然语言处理MCP** (`mcp_nlp_processor`)
-**功能**:
-- `analyze_sentiment(text)` - 情感分析
-- `extract_insights(conversation)` - 提取对话洞察
-- `generate_summary(long_text)` - 内容摘要
-- `categorize_activities(description)` - 活动分类
+### 7. **NLP Processor MCP** (`mcp_nlp_processor`)
+**Functions**:
+- `analyze_sentiment(text)` - Sentiment analysis  
+- `extract_insights(conversation)` - Extract insights  
+- `generate_summary(long_text)` - Summarize content  
+- `categorize_activities(description)` - Activity classification  
 
-### 8. **文件管理MCP** (`mcp_file_manager`)
-**功能**:
-- `create_daily_folder(date)` - 创建日期文件夹
-- `backup_data(source, destination)` - 数据备份
-- `search_historical(query, date_range)` - 历史数据搜索
-- `generate_reports(time_period, type)` - 生成定期报告
+### 8. **File Manager MCP** (`mcp_file_manager`)
+**Functions**:
+- `create_daily_folder(date)` - Create folder  
+- `backup_data(source, destination)` - Backup data  
+- `search_historical(query, date_range)` - Search history  
+- `generate_reports(time_period, type)` - Generate reports  
 
 ---
 
-## 实施建议
+## Implementation Suggestions
+1. **Phased Deployment**: Start with core functions, then expand  
+2. **Data Privacy**: Ensure secure storage and processing of personal data  
+3. **User Feedback**: Establish feedback mechanisms for optimization  
+4. **Scalability**: Modular design for future expansion  
+5. **Error Handling**: Add error recovery mechanisms for reliability  
 
-1. **分阶段部署**: 先实现基础功能，再逐步添加高级特性
-2. **数据隐私**: 确保所有个人数据的安全存储和处理
-3. **用户反馈**: 建立反馈机制持续优化助理表现
-4. **可扩展性**: 设计模块化架构便于未来功能扩展
-5. **容错处理**: 添加错误处理和恢复机制确保服务稳定性
